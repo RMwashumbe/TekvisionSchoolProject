@@ -27,12 +27,12 @@
 PRG="$0"
 # Need this for relative symlinks.
 while [ -h "$PRG" ] ; do
-    ls=`ls -ld "$PRG"`
-    link=`expr "$ls" : '.*-> \(.*\)$'`
+    ls= ls -ld "$PRG"
+    link= expr "$ls" : '.*-> (.*)$'
     if expr "$link" : '/.*' > /dev/null; then
-        PRG="$link"
+        PRG="$link";
     else
-        PRG=`dirname "$PRG"`"/$link"
+        PRG=dirname "$PRG""/$link"
     fi
 done
 SAVED="`pwd`"
@@ -41,7 +41,7 @@ APP_HOME="`pwd -P`"
 cd "$SAVED" >/dev/null
 
 APP_NAME="Gradle"
-APP_BASE_NAME=`basename "$0"`
+APP_BASE_NAME= basename "$0"
 
 # Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
 DEFAULT_JVM_OPTS='"-Xmx64m" "-Xms64m"'
@@ -68,16 +68,16 @@ nonstop=false
 case "`uname`" in
   CYGWIN* )
     cygwin=true
-    ;;
+    ;
   Darwin* )
     darwin=true
-    ;;
+    ;
   MINGW* )
     msys=true
-    ;;
+    ;
   NONSTOP* )
     nonstop=true
-    ;;
+    ;
 esac
 
 CLASSPATH=$APP_HOME/gradle/wrapper/gradle-wrapper.jar
@@ -159,16 +159,16 @@ if [ "$cygwin" = "true" -o "$msys" = "true" ] ; then
         i=`expr $i + 1`
     done
     case $i in
-        0) set -- ;;
-        1) set -- "$args0" ;;
-        2) set -- "$args0" "$args1" ;;
-        3) set -- "$args0" "$args1" "$args2" ;;
-        4) set -- "$args0" "$args1" "$args2" "$args3" ;;
-        5) set -- "$args0" "$args1" "$args2" "$args3" "$args4" ;;
-        6) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" ;;
-        7) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" ;;
-        8) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" ;;
-        9) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" "$args8" ;;
+        0) set -- ;
+        1) set -- "$args0" ;
+        2) set -- "$args0" "$args1" ;
+        3) set -- "$args0" "$args1" "$args2" ;
+        4) set -- "$args0" "$args1" "$args2" "$args3" ;
+        5) set -- "$args0" "$args1" "$args2" "$args3" "$args4" ;
+        6) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" ;
+        7) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" ;
+        8) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" ;
+        9) set -- "$args0" "$args1" "$args2" "$args3" "$args4" "$args5" "$args6" "$args7" "$args8" ;
     esac
 fi
 

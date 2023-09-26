@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "488302514253",
+    "project_id": "tekvision-239a2",
+    "storage_bucket": "tekvision-239a2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488302514253:android:9f562508eb015f62964c04",
+        "android_client_info": {
+          "package_name": "com.example.tekvision"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Vzrnq9GT2hz6UacvoJkE_zMhcNCafMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488302514253:android:e97f735cdc31981e964c04",
+        "android_client_info": {
+          "package_name": "com.example.tekvision2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Vzrnq9GT2hz6UacvoJkE_zMhcNCafMk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
